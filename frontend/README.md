@@ -1,36 +1,50 @@
-# Midnight Cravings — Frontend
+# 🎨 Midnight Cravings — Frontend
 
-This is a minimal React frontend scaffold for the `backend/` in this workspace.
+The frontend of **Midnight Cravings** is a modern, responsive single-page application (SPA) built with React and Vite, styled using Tailwind CSS.
 
-Prereqs
-- Node.js (16+ recommended)
-- npm
+## ✨ Key Features
+- **Responsive Design**: Optimized for mobile, tablet, and desktop.
+- **Dynamic Routing**: Smooth transitions between pages using React Router.
+- **Role-Based Views**: Specialized interfaces for Customers, Sellers, and Admins.
+- **State Management**: Context API for authentication and global settings.
+- **Optimistic UI**: Fast-responding interface for interactions like liking and cart updates.
 
-Setup (Windows PowerShell)
+## 🛠️ Technology Stack
+- **Framework**: React.js (Vite)
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **API Client**: Axios
+- **Routing**: React Router DOM
 
-1. Install dependencies
+## 🚀 Getting Started
 
-   npm install
+### 1. Install Dependencies
+```bash
+npm install
+```
 
-2. Build Tailwind CSS (required once, or whenever you change `src/index.css`):
+### 2. Configure Environment
+Create a `.env` file in the `frontend/` directory:
+```env
+VITE_API_URL=http://localhost:5000/api
+```
 
-   npm run build:css
+### 3. Build Styling
+If you've modified Tailwind configurations or global CSS:
+```bash
+npm run build:css
+```
 
-   This will generate `src/tailwind.generated.css` from `src/index.css` (the file with `@tailwind base; @tailwind components; @tailwind utilities`).
+### 4. Run Development Server
+```bash
+npm run dev
+```
 
-3. Start dev server
+## 📂 Structure
+- `/src/components`: Generic and reusable UI components.
+- `/src/pages`: Main view components (Home, Product, Cart, Admin, etc.).
+- `/src/context`: React Context providers for state management.
+- `/src/services`: API utility functions for backend communication.
 
-   npm run dev
-
-Or run both build and dev in one step:
-
-   npm run start:local
-
-Notes
-- API base URL is read from environment variable `VITE_API_URL`. By default it uses `http://localhost:5000`.
-- The `Products` page requests `GET /api/products` — make sure your backend server is running.
-- The project includes a small fallback stylesheet `src/fallback.css` so the app is usable even if Tailwind build isn't available in the environment.
-
-Next steps
-- Implement login/register forms and auth flow.
-- Add Cart page and product detail pages.
+---
+*Maintained with ❤️ by the Midnight Cravings Team.*
